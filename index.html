@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Momentum Judged!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-lightbox.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style2.css" />
+    <link rel="stylesheet" type="text/css" href="css/c3.min.css" />
+    <script src="js/modernizr.custom.js"></script>
+
+
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script>
+        $(document).on("click", ".alert", function (e) {
+            bootbox.dialog({
+                message: '<iframe width="560" height="315" src="https://www.youtube.com/embed/qiMudEyLPd0" frameborder="0" allowfullscreen></iframe>'
+            })
+        });
+    </script>
+    <div class="customContainer">
+        <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+        <div id="theSidebar" class="sidebar">
+            <button class="close-button fa fa-fw fa-close"></button>
+            <h1>1996 Post Season<span>Momentum Analysis</span></h1>
+            <div class="related">
+                <h3>By</h3>
+                <ul>
+                    <li>Vamshidhar Reddy Gondi [vgond2]</li>
+                    <br>
+					<br>
+				</ul>
+            </div>
+            <div class="video">
+                <a class="alert" href=#>Video</a>
+            </div>
+            <div class="data">
+                <a href="data/Scores.xlsx">Download Data</a>
+
+            </div>
+        </div>
+        <div id="theGrid" class="main">
+            <section class="grid">
+                <a class="grid__item1" href="#">
+                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                </a>
+                <a class="grid__item1" href="">
+                    <div>
+                        <table class="table table-bordered table-hover table-condensed">
+                            <thead>
+                                <tr>
+                                    <th colspan="11">Graph Data - Non-Trivial Month</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Match</th>
+                                    <th colspan="2">Non-Trivial Score</th>
+                                    <th colspan="3">Graph Point</th>
+                                </tr>
+                                <tr>
+                                    <th>Team-A VS Team-B</th>
+                                    <th>Match Score</th>
+                                    <th>Team A</th>
+                                    <th>Team B</th>
+                                    <th>X</th>
+                                    <th>Y</th>
+                                    <th>Point</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="success">
+                                    <td><b><i class="icon ion-trophy"></i>NYY</b> vs ATL</td>
+                                    <td>4 - 2</td>
+                                    <td>0.43</td>
+                                    <td>0.66</td>
+                                    <td>-0.22</td>
+                                    <td>0.67</td>
+                                    <td>(-0.22, 0.67)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>NYY</b> vs BAL</td>
+                                    <td>4 - 1</td>
+                                    <td>0.43</td>
+                                    <td>0.63</td>
+                                    <td>-0.20</td>
+                                    <td>0.8</td>
+                                    <td>(-0.20, 0.8)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>NYY</b> vs TEX</td>
+                                    <td>3 - 1</td>
+                                    <td>0.43</td>
+                                    <td>0.57</td>
+                                    <td>-0.14</td>
+                                    <td>0.75</td>
+                                    <td>(-0.14, 0.75)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>STL</b> vs SDP</td>
+                                    <td>3 0</td>
+                                    <td>0.50</td>
+                                    <td>0.64</td>
+                                    <td>-0.14</td>
+                                    <td>1</td>
+                                    <td>(-0.14, 1)</td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>ATL</b> vs LAD</td>
+                                    <td>3 - 0</td>
+                                    <td>0.66</td>
+                                    <td>0.63</td>
+                                    <td>0.03</td>
+                                    <td>1</td>
+                                    <td>(0.03, 1)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>BAL</b> vs CLE</td>
+                                    <td>3 - 1</td>
+                                    <td>0.63</td>
+                                    <td>0.54</td>
+                                    <td>0.09</td>
+                                    <td>0.75</td>
+                                    <td>(0.09, 0.75)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>ATL</b> vs STL</td>
+                                    <td>4 - 3</td>
+                                    <td>0.66</td>
+                                    <td>0.50</td>
+                                    <td>0.16</td>
+                                    <td>0.57</td>
+                                    <td>(0.16, 0.57)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </a>
+                <a class="grid__item1" href="">
+                    <div>
+                        <table class="table table-bordered table-hover table-condensed">
+                            <thead>
+                                <tr>
+                                    <th colspan="11">Graph Data - Full Series</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Match</th>
+                                    <th colspan="3">Team A</th>
+                                    <th colspan="3">Team B</th>
+                                    <th colspan="3">Graph Point</th>
+                                </tr>
+                                <tr>
+                                    <th>Team-A VS Team-B</th>
+                                    <th>Match Score</th>
+                                    <th>Won</th>
+                                    <th>Lost</th>
+                                    <th>WP</th>
+                                    <th>Won</th>
+                                    <th>Lost</th>
+                                    <th>WP</th>
+                                    <th>X</th>
+                                    <th>Y</th>
+                                    <th>Point</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>BAL</b> vs CLE</td>
+                                    <td>3 - 1</td>
+                                    <td>88</td>
+                                    <td>74</td>
+                                    <td>0.54</td>
+                                    <td>99</td>
+                                    <td>62</td>
+                                    <td>0.61</td>
+                                    <td>-0.07</td>
+                                    <td>0.75</td>
+                                    <td>(-0.07, 0.75)</td>
+                                </tr>
+                                <tr class="success">
+                                    <td><b><i class="icon ion-trophy"></i>NYY</b> vs ATL</td>
+                                    <td>4 - 2</td>
+                                    <td>92</td>
+                                    <td>70</td>
+                                    <td>0.57</td>
+                                    <td>96</td>
+                                    <td>66</td>
+                                    <td>0.59</td>
+                                    <td>-0.02</td>
+                                    <td>0.67</td>
+                                    <td>(-0.02, 0.67)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>STL</b> vs SDP</td>
+                                    <td>3 - 0</td>
+                                    <td>88</td>
+                                    <td>74</td>
+                                    <td>0.54</td>
+                                    <td>91</td>
+                                    <td>71</td>
+                                    <td>0.56</td>
+                                    <td>-0.02</td>
+                                    <td>1</td>
+                                    <td>(-0.02, 1)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>NYY</b> vs TEX</td>
+                                    <td>3 - 1</td>
+                                    <td>92</td>
+                                    <td>70</td>
+                                    <td>0.57</td>
+                                    <td>90</td>
+                                    <td>72</td>
+                                    <td>0.56</td>
+                                    <td>0.01</td>
+                                    <td>0.75</td>
+                                    <td>(0.01, 0.75)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>NYY</b> vs BAL</td>
+                                    <td>4 - 1</td>
+                                    <td>92</td>
+                                    <td>70</td>
+                                    <td>0.57</td>
+                                    <td>88</td>
+                                    <td>74</td>
+                                    <td>0.54</td>
+                                    <td>0.02</td>
+                                    <td>0.8</td>
+                                    <td>(0.02, 0.8)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>ATL</b> vs LAD</td>
+                                    <td>3 - 0</td>
+                                    <td>96</td>
+                                    <td>66</td>
+                                    <td>0.59</td>
+                                    <td>90</td>
+                                    <td>72</td>
+                                    <td>0.56</td>
+                                    <td>0.04</td>
+                                    <td>1</td>
+                                    <td>(0.04, 1)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>ATL</b> vs STL</td>
+                                    <td>4 - 3</td>
+                                    <td>96</td>
+                                    <td>66</td>
+                                    <td>0.59</td>
+                                    <td>88</td>
+                                    <td>74</td>
+                                    <td>0.54</td>
+                                    <td>0.05</td>
+                                    <td>0.57</td>
+                                    <td>(0.05, 0.57)</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </a>
+                <a class="grid__item1" href="">
+                    <div>
+                        <table class="table table-bordered table-hover table-condensed">
+                            <thead>
+                                <tr>
+                                    <th colspan="11">Graph Data - First Half Series</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Match</th>
+                                    <th colspan="3">Team A</th>
+                                    <th colspan="3">Team B</th>
+                                    <th colspan="3">Graph Point</th>
+                                </tr>
+                                <tr>
+                                    <th>Team-A VS Team-B</th>
+                                    <th>Match Score</th>
+                                    <th>Won</th>
+                                    <th>Lost</th>
+                                    <th>WP</th>
+                                    <th>Won</th>
+                                    <th>Lost</th>
+                                    <th>WP</th>
+                                    <th>X</th>
+                                    <th>Y</th>
+                                    <th>Point</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>BAL</b> vs CLE</td>
+                                    <td>3 - 1</td>
+                                    <td>46</td>
+                                    <td>39</td>
+                                    <td>0.54</td>
+                                    <td>52</td>
+                                    <td>35</td>
+                                    <td>0.60</td>
+                                    <td>-0.06</td>
+                                    <td>0.75</td>
+                                    <td>(-0.06, 0.75)</td>
+                                </tr>
+                                <tr class="success">
+                                    <td><b><i class="icon ion-trophy"></i>NYY</b> vs ATL</td>
+                                    <td>4 - 2</td>
+                                    <td>52</td>
+                                    <td>33</td>
+                                    <td>0.61</td>
+                                    <td>54</td>
+                                    <td>33</td>
+                                    <td>0.62</td>
+                                    <td>-0.01</td>
+                                    <td>0.67</td>
+                                    <td>(-0.01, 0.67)</td>
+                                </tr> 
+                                <tr>
+                                    <td><b>STL</b> vs SDP</td>
+                                    <td>3 - 0</td>
+                                    <td>46</td>
+                                    <td>41</td>
+                                    <td>0.53</td>
+                                    <td>48</td>
+                                    <td>41</td>
+                                    <td>0.54</td>
+                                    <td>-0.01</td>
+                                    <td>1</td>
+                                    <td>(-0.01, 1)</td>
+                                </tr>   
+                                <tr>
+                                    <td><b>NYY</b> vs TEX</td>
+                                    <td>3 - 1</td>
+                                    <td>52</td>
+                                    <td>33</td>
+                                    <td>0.61</td>
+                                    <td>51</td>
+                                    <td>36</td>
+                                    <td>0.59</td>
+                                    <td>0.03</td>
+                                    <td>0.75</td>
+                                    <td>(0.03, 0.75)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>NYY</b> vs BAL</td>
+                                    <td>4 - 1</td>
+                                    <td>52</td>
+                                    <td>33</td>
+                                    <td>0.61</td>
+                                    <td>46</td>
+                                    <td>39</td>
+                                    <td>0.54</td>
+                                    <td>0.07</td>
+                                    <td>0.8</td>
+                                    <td>(0.07, 0.8)</td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>ATL</b> vs STL</td>
+                                    <td>4 - 3</td>
+                                    <td>54</td>
+                                    <td>33</td>
+                                    <td>0.62</td>
+                                    <td>46</td>
+                                    <td>41</td>
+                                    <td>0.53</td>
+                                    <td>0.09</td>
+                                    <td>0.57</td>
+                                    <td>(0.09, 0.57)</td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>ATL</b> vs LAD</td>
+                                    <td>3 - 0</td>
+                                    <td>54</td>
+                                    <td>33</td>
+                                    <td>0.62</td>
+                                    <td>47</td>
+                                    <td>42</td>
+                                    <td>0.53</td>
+                                    <td>0.09</td>
+                                    <td>1</td>
+                                    <td>(0.09, 1)</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <h2 class="title title--preview">New York Yankees</h2>
+                    <div class="loader"></div> <span class="category">NYY</span>
+                    <div class="meta meta--preview"> <img class="meta__avatar" src="img/flags/NewYorkYankees.jpg" alt="New York Yankees" /> </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <h2 class="title title--preview">Atlanta Braves</h2>
+                    <div class="loader"></div> <span class="category">ATL</span>
+                    <div class="meta meta--preview"> <img class="meta__avatar" src="img/flags/AtlantaBraves.jpg" alt="Atlanta Braves" /> </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <h2 class="title title--preview">Baltimore Oriols</h2>
+                    <div class="loader"></div> <span class="category">BAL</span>
+                    <div class="meta meta--preview"> <img class="meta__avatar" src="img/flags/BaltimoreOriols.jpg" alt="Baltimore Oriols" /> </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <h2 class="title title--preview">Cleave Land Indians</h2>
+                    <div class="loader"></div> <span class="category">CLE</span>
+                    <div class="meta meta--preview"> <img class="meta__avatar" src="img/flags/Cleave%20Land%20Indians.jpg" alt="Cleave Land Indians" /> </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <h2 class="title title--preview">Texas Rangers</h2>
+                    <div class="loader"></div> <span class="category">TEX</span>
+                    <div class="meta meta--preview"> <img class="meta__avatar" src="img/flags/TexasRangers.jpg" alt="Texas Rangers" /></div>
+                </a>
+                <a class="grid__item" href="#">
+                    <h2 class="title title--preview">Los Angeles Dodgers</h2>
+                    <div class="loader"></div> <span class="category">LAD</span>
+                    <div class="meta meta--preview"> <img class="meta__avatar" src="img/flags/LosAnglesDoddlers.jpg" alt="Los Angeles Dodgers" /></div>
+                </a>
+                <a class="grid__item" href="#">
+                    <h2 class="title title--preview">St. Louis Cardinals</h2>
+                    <div class="loader"></div> <span class="category">STL</span>
+                    <div class="meta meta--preview"> <img class="meta__avatar" src="img/flags/StLouisCardinals.jpg" alt="St. Louis Cardinals" /></div>
+                </a>
+                <a class="grid__item" href="#">
+                    <h2 class="title title--preview">San Diego Padres</h2>
+                    <div class="loader"></div> <span class="category">SDP</span>
+                    <div class="meta meta--preview"> <img class="meta__avatar" src="img/flags/SanDiego%20Pardes.jpg" alt="San Diego Padres" /></div>
+                </a>
+            </section>
+            <section class="content">
+                <div class="scroll-wrap">
+                    <article class="content__item">
+                        <h2 class="title title--full">New York Yankees</h2> <span class="category category--full"><i class="icon ion-trophy"></i> 92 &ndash; 70 &nbsp;&nbsp;&nbsp;&nbsp; <i class="icon ion-arrow-graph-up-right"></i> 0.567</span>
+                        <div class="meta meta--full"> <img class="meta__avatar" src="img/flags/NewYorkYankees.jpg" alt="New York Yankees" /> <span class="meta__author">NYY Stats</span><span class="meta__misc meta__misc--seperator"><i class="icon ion-trophy"></i>&nbsp; Won: 92 &nbsp;&nbsp;&nbsp;  <i class="icon ion-stats-bars"></i> WP:0.567</span> </div>
+                        <p>
+                            <div id="NYYGraph" style="height: 300px; width: 100%;"></div>
+                            <div>
+                                <table class="table">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="4">Summary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th>Won</th>
+                                            <th>Lost</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Full</td>
+                                            <td>92</td>
+                                            <td>70</td>
+                                            <td>0.568</td>
+                                        </tr>
+                                        <tr>
+                                            <td>First</td>
+                                            <td>52</td>
+                                            <td>33</td>
+                                            <td>0.612</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Second</td>
+                                            <td>40</td>
+                                            <td>37</td>
+                                            <td>0.519</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <table class="table table-condensed">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="5">Playoff Match Overview</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Played Against</th>
+                                            <th>Match Score</th>
+                                            <th>Result</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>ALDS</td>
+                                            <td>TEX</td>
+                                            <td>3 &ndash; 1</td>
+                                            <td>Won</td>
+                                            <td>0.75</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ALCS</td>
+                                            <td>BAL</td>
+                                            <td>4 &ndash; 1</td>
+                                            <td>Won</td>
+                                            <td>0.8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>World Series</td>
+                                            <td>ATL</td>
+                                            <td>4 &ndash; 2</td>
+                                            <td>Won <i class="icon ion-trophy"></td>
+                                            <td>0.67</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </p>
+                    </article>
+                    <article class="content__item">
+                        <h2 class="title title--full">Atlanta Braves</h2> <span class="category category--full"><i class="icon ion-trophy"></i> 96 &ndash; 66 &nbsp;&nbsp;&nbsp;&nbsp; <i class="icon ion-arrow-graph-up-right"></i> 0.593</span>
+                                                <div class="meta meta--full"> <img class="meta__avatar" src="img/flags/AtlantaBraves.jpg" alt="Atlanta Braves" /> <span class="meta__author">ATL Stats</span><span class="meta__misc meta__misc--seperator"><i class="icon ion-trophy"></i>&nbsp; Won: 96 &nbsp;&nbsp;&nbsp;  <i class="icon ion-stats-bars"></i> WP:0.593</span> </div>
+                                                <p>
+                                                    <div id="ATLGraph" style="height: 300px; width: 100%;"></div>
+                                                    <div>
+                                                        <table class="table">
+                                                            <thead class="thead-default">
+                                                                <tr>
+                                                                    <th colspan="4">Summary</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>&nbsp;</th>
+                                                                    <th>Won</th>
+                                                                    <th>Lost</th>
+                                                                    <th>WP</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Full</td>
+                                                                    <td>96</td>
+                                                                    <td>66</td>
+                                                                    <td>0.593</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>First</td>
+                                                                    <td>54</td>
+                                                                    <td>33</td>
+                                                                    <td>0.621</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Second</td>
+                                                                    <td>42</td>
+                                                                    <td>33</td>
+                                                                    <td>0.560</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div>
+                                                        <table class="table table-condensed">
+                                                            <thead class="thead-default">
+                                                                <tr>
+                                                                    <th colspan="5">Playoff Match Overview</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Type</th>
+                                                                    <th>Played Against</th>
+                                                                    <th>Match Score</th>
+                                                                    <th>Result</th>
+                                                                    <th>WP</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>NLDS</td>
+                                                                    <td>LAD</td>
+                                                                    <td>3 &ndash; 0</td>
+                                                                    <td>Won</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>NLCS</td>
+                                                                    <td>STL</td>
+                                                                    <td>4 &ndash; 3</td>
+                                                                    <td>Won</td>
+                                                                    <td>0.57</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>World Series</td>
+                                                                    <td>NYY</td>
+                                                                    <td>4 &ndash; 2</td>
+                                                                    <td>Lost</td>
+                                                                    <td>0.33</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </p>
+                    </article>
+                    <article class="content__item">
+                        <h2 class="title title--full">Baltimore Orioles</h2> <span class="category category--full"><i class="icon ion-trophy"></i> 88 &ndash; 74 &nbsp;&nbsp;&nbsp;&nbsp; <i class="icon ion-arrow-graph-up-right"></i> 0.543</span>
+                        <div class="meta meta--full"> <img class="meta__avatar" src="img/flags/BaltimoreOriols.jpg" alt="Baltimore Orioles" /> <span class="meta__author">BAL Stats</span><span class="meta__misc meta__misc--seperator"><i class="icon ion-trophy"></i>&nbsp; Won: 88 &nbsp;&nbsp;&nbsp;  <i class="icon ion-stats-bars"></i> WP:0.543</span> </div>
+                        <p>
+                            <div id="BALGraph" style="height: 300px; width: 100%;"></div>
+                            <div>
+                                <table class="table">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="4">Summary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th>Won</th>
+                                            <th>Lost</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Full</td>
+                                            <td>88</td>
+                                            <td>74</td>
+                                            <td>0.543</td>
+                                        </tr>
+                                        <tr>
+                                            <td>First</td>
+                                            <td>46</td>
+                                            <td>39</td>
+                                            <td>0.541</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Second</td>
+                                            <td>42</td>
+                                            <td>35</td>
+                                            <td>0.545</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <table class="table table-condensed">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="5">Playoff Match Overview</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Played Against</th>
+                                            <th>Match Score</th>
+                                            <th>Result</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>ALDS</td>
+                                            <td>CLE</td>
+                                            <td>3 &ndash; 1</td>
+                                            <td>Won</td>
+                                            <td>0.75</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ALCS</td>
+                                            <td>NYY</td>
+                                            <td>4 &ndash; 1</td>
+                                            <td>Lost</td>
+                                            <td>0.2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </p>
+                    </article>
+                    <article class="content__item">
+                        <h2 class="title title--full">Cleaveland Indians</h2> <span class="category category--full"><i class="icon ion-trophy"></i> 99 &ndash; 62 &nbsp;&nbsp;&nbsp;&nbsp; <i class="icon ion-arrow-graph-up-right"></i> 0.615</span>
+                        <div class="meta meta--full"> <img class="meta__avatar" src="img/flags/Cleave%20Land%20Indians.jpg" alt="Cleaveland Indians" /> <span class="meta__author">CLE Stats</span><span class="meta__misc meta__misc--seperator"><i class="icon ion-trophy"></i>&nbsp; Won: 99 &nbsp;&nbsp;&nbsp;  <i class="icon ion-stats-bars"></i> WP:0.615</span> </div>
+                        <p>
+                            <div id="CLEGraph" style="height: 300px; width: 100%;"></div>
+                            <div>
+                                <table class="table">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="4">Summary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th>Won</th>
+                                            <th>Lost</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Full</td>
+                                            <td>99</td>
+                                            <td>62</td>
+                                            <td>0.615</td>
+                                        </tr>
+                                        <tr>
+                                            <td>First</td>
+                                            <td>52</td>
+                                            <td>35</td>
+                                            <td>0.598</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Second</td>
+                                            <td>47</td>
+                                            <td>27</td>
+                                            <td>0.635</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <table class="table table-condensed">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="5">Playoff Match Overview</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Played Against</th>
+                                            <th>Match Score</th>
+                                            <th>Result</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>ALDS</td>
+                                            <td>BAL</td>
+                                            <td>3 &ndash; 1</td>
+                                            <td>Lost</td>
+                                            <td>0.25</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </p>
+                    </article>
+                    <article class="content__item">
+                        <h2 class="title title--full">Texas Rangers</h2> <span class="category category--full"><i class="icon ion-trophy"></i> 90 &ndash; 72 &nbsp;&nbsp;&nbsp;&nbsp; <i class="icon ion-arrow-graph-up-right"></i> 0.556</span>
+                        <div class="meta meta--full"> <img class="meta__avatar" src="img/flags/TexasRangers.jpg" alt="Texas Rangers" /> <span class="meta__author">TEX Stats</span><span class="meta__misc meta__misc--seperator"><i class="icon ion-trophy"></i>&nbsp; Won: 90 &nbsp;&nbsp;&nbsp;  <i class="icon ion-stats-bars"></i> WP:0.556</span> </div>
+                        <p>
+                            <div id="TEXGraph" style="height: 300px; width: 100%;"></div>
+                            <div>
+                                <table class="table">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="4">Summary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th>Won</th>
+                                            <th>Lost</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Full</td>
+                                            <td>90</td>
+                                            <td>72</td>
+                                            <td>0.556</td>
+                                        </tr>
+                                        <tr>
+                                            <td>First</td>
+                                            <td>51</td>
+                                            <td>36</td>
+                                            <td>0.586</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Second</td>
+                                            <td>39</td>
+                                            <td>36</td>
+                                            <td>0.520</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <table class="table table-condensed">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="5">Playoff Match Overview</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Played Against</th>
+                                            <th>Match Score</th>
+                                            <th>Result</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>ALDS</td>
+                                            <td>NYY</td>
+                                            <td>3 &ndash; 1</td>
+                                            <td>Lost</td>
+                                            <td>0.25</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </p>
+                    </article>
+                    <article class="content__item">
+                        <h2 class="title title--full">Los Angles Dodlers</h2> <span class="category category--full"><i class="icon ion-trophy"></i> 90 &ndash; 72 &nbsp;&nbsp;&nbsp;&nbsp; <i class="icon ion-arrow-graph-up-right"></i> 0.556</span>
+                        <div class="meta meta--full"> <img class="meta__avatar" src="img/flags/LosAnglesDoddlers.jpg" alt="Los Angles Dodlers" /> <span class="meta__author">LAD Stats</span><span class="meta__misc meta__misc--seperator"><i class="icon ion-trophy"></i>&nbsp; Won: 90 &nbsp;&nbsp;&nbsp;  <i class="icon ion-stats-bars"></i> WP:0.556</span> </div>
+                        <p>
+                            <div id="LADGraph" style="height: 300px; width: 100%;"></div>
+                            <div>
+                                <table class="table">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="4">Summary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th>Won</th>
+                                            <th>Lost</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Full</td>
+                                            <td>90</td>
+                                            <td>72</td>
+                                            <td>0.556</td>
+                                        </tr>
+                                        <tr>
+                                            <td>First</td>
+                                            <td>47</td>
+                                            <td>42</td>
+                                            <td>0.528</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Second</td>
+                                            <td>43</td>
+                                            <td>30</td>
+                                            <td>0.589</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <table class="table table-condensed">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="5">Playoff Match Overview</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Played Against</th>
+                                            <th>Match Score</th>
+                                            <th>Result</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>NLDS</td>
+                                            <td>NYY</td>
+                                            <td>3 &ndash; 0</td>
+                                            <td>Lost</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </p>
+                    </article>
+                    <article class="content__item">
+                        <h2 class="title title--full">St. Louis Cardinals</h2> <span class="category category--full"><i class="icon ion-trophy"></i> 88 &ndash; 74 &nbsp;&nbsp;&nbsp;&nbsp; <i class="icon ion-arrow-graph-up-right"></i> 0.543</span>
+                        <div class="meta meta--full"> <img class="meta__avatar" src="img/flags/StLouisCardinals.jpg" alt="St. Louis Cardinals" /> <span class="meta__author">STL Stats</span><span class="meta__misc meta__misc--seperator"><i class="icon ion-trophy"></i>&nbsp; Won: 88 &nbsp;&nbsp;&nbsp;  <i class="icon ion-stats-bars"></i> WP:0.543</span> </div>
+                        <p>
+                            <div id="STLGraph" style="height: 300px; width: 100%;"></div>
+                            <div>
+                                <table class="table">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="4">Summary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th>Won</th>
+                                            <th>Lost</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Full</td>
+                                            <td>88</td>
+                                            <td>74</td>
+                                            <td>0.543</td>
+                                        </tr>
+                                        <tr>
+                                            <td>First</td>
+                                            <td>46</td>
+                                            <td>41</td>
+                                            <td>0.529</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Second</td>
+                                            <td>42</td>
+                                            <td>33</td>
+                                            <td>0.560</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <table class="table table-condensed">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="5">Playoff Match Overview</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Played Against</th>
+                                            <th>Match Score</th>
+                                            <th>Result</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>NLDS</td>
+                                            <td>NYY</td>
+                                            <td>3 &ndash; 0</td>
+                                            <td>Won</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NLCS</td>
+                                            <td>ATL</td>
+                                            <td>4 &ndash; 3</td>
+                                            <td>Lost</td>
+                                            <td>0.43</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </p>
+                    </article>
+                    <article class="content__item">
+                        <h2 class="title title--full">San Diego Pardes</h2> <span class="category category--full"><i class="icon ion-trophy"></i> 91 &ndash; 71 &nbsp;&nbsp;&nbsp;&nbsp; <i class="icon ion-arrow-graph-up-right"></i> 0.562</span>
+                        <div class="meta meta--full"> <img class="meta__avatar" src="img/flags/SanDiego%20Pardes.jpg" alt="San Diego Pardes" /> <span class="meta__author">SDP Stats</span><span class="meta__misc meta__misc--seperator"><i class="icon ion-trophy"></i>&nbsp; Won: 91 &nbsp;&nbsp;&nbsp;  <i class="icon ion-stats-bars"></i> WP:0.562</span> </div>
+                        <p>
+                            <div id="SDPGraph" style="height: 300px; width: 100%;"></div>
+                            <div>
+                                <table class="table">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="4">Summary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th>Won</th>
+                                            <th>Lost</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Full</td>
+                                            <td>91</td>
+                                            <td>71</td>
+                                            <td>0.562</td>
+                                        </tr>
+                                        <tr>
+                                            <td>First</td>
+                                            <td>48</td>
+                                            <td>41</td>
+                                            <td>0.539</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Second</td>
+                                            <td>43</td>
+                                            <td>30</td>
+                                            <td>0.589</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <table class="table table-condensed">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th colspan="5">Playoff Match Overview</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Played Against</th>
+                                            <th>Match Score</th>
+                                            <th>Result</th>
+                                            <th>WP</th>
+                                        </tr>
+                                        <tr>
+                                            <td>NLDS</td>
+                                            <td>STL</td>
+                                            <td>3 &ndash; 0</td>
+                                            <td>Lost</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </p>
+                    </article>
+                    </div>
+                    <button class="close-button"><i class='ion-close'></i><span>Close</span></button>
+            </section>
+            </div>
+        </div>
+        <!-- /container -->
+        <script src="js/classie.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/canvasjs.min.js"></script>
+        <script src="js/charts.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+
+</body>
+
+</html>
